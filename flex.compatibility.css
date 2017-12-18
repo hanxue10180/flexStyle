@@ -1,0 +1,348 @@
+@CHARSET "UTF-8";
+/*
+  定义容器的display属性
+*/
+.bbox{
+    display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+	display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+	display: -moz-flex;
+    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+/*
+   主轴对齐方式
+*/
+
+/*容器主轴居中对齐*/
+.bbox.xcenter{
+	-moz-box-pack: center; /*Firefox*/
+    -webkit-box-pack: center; /*Safari,Opera,Chrome*/
+    box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+/*容器主轴左对齐（默认）*/
+.bbox.xleft{
+	-moz-box-pack: start; /*Firefox*/
+    -webkit-box-pack: start; /*Safari,Opera,Chrome*/
+    box-pack: start;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+/*容器主轴右对齐*/
+.bbox.xright{
+	-moz-box-pack: end; /*Firefox*/
+    -webkit-box-pack:end; /*Safari,Opera,Chrome*/
+    box-pack: end;
+    -moz-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+/*容器主轴两端对齐*/
+.bbox.xbetween{
+	-moz-box-pack: justify; /*Firefox*/
+    -webkit-box-pack:justify; /*Safari,Opera,Chrome*/
+    box-pack: justify;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+/*容器主轴平均分布*/
+.bbox.xaround{
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+/*
+ 交叉轴对齐方式
+*/
+
+/*顶部对齐*/
+.bbox.ytop{
+	-moz-box-align: start; /*Firefox*/
+    -webkit-box-align: start; /*Safari,Opera,Chrome*/
+    box-align: start;
+	-moz-align-items: flex-start;
+    -webkit-align-items: flex-start;
+	align-items:flex-start;
+}
+/*底部对齐*/
+.bbox.ybottom{
+	-moz-box-align: end; /*Firefox*/
+    -webkit-box-align: end; /*Safari,Opera,Chrome*/
+    box-align: end;
+	-moz-align-items: flex-end;
+    -webkit-align-items: flex-end;
+	align-items:flex-end;
+}
+/*居中对齐*/
+.bbox.ycenter{
+	-moz-box-align: center; /*Firefox*/
+    -webkit-box-align:center; /*Safari,Opera,Chrome*/
+    box-align: center;
+	-moz-align-items: center;
+    -webkit-align-items: center;
+	align-items:center;
+}
+.bbox.ybaseline{
+	-moz-box-align: baseline; /*Firefox*/
+    -webkit-box-align:baseline; /*Safari,Opera,Chrome*/
+    box-align: baseline;
+	-moz-align-items: baseline;
+    -webkit-align-items: baseline;
+	align-items:baseline;
+}
+.bbox.ystretch{
+	-moz-box-align: stretch; /*Firefox*/
+    -webkit-box-align:stretch; /*Safari,Opera,Chrome*/
+    box-align: stretch;
+	-moz-align-items:stretch;
+    -webkit-align-items: stretch;
+	align-items:stretch;
+}
+/*
+*水平垂直居中
+*/
+.bbox.xycenter{
+	-moz-box-pack: center; /*Firefox*/
+    -webkit-box-pack: center; /*Safari,Opera,Chrome*/
+    box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+	-moz-box-align: center; /*Firefox*/
+    -webkit-box-align:center; /*Safari,Opera,Chrome*/
+    box-align: center;
+	-moz-align-items: center;
+    -webkit-align-items: center;
+	align-items:center;
+}
+/*
+ *子元素显示方向
+*/
+.bbox.lr{
+	-moz-box-orient:vertical;
+	-moz-box-direction:normal; /*Firefox*/
+	-webkit-box-orient:vertical;
+    -webkit-box-direction: normal; /*Safari,Opera,Chrome*/
+	box-orient:vertical;
+    box-direction: normal;
+	-moz-flex-direction:row;
+    -webkit-flex-direction:row;
+	flex-direction:row;
+}
+.bbox.rl{
+	-moz-box-orient:vertical;
+	-moz-box-direction:reverse; /*Firefox*/
+	-webkit-box-orient:vertical;
+    -webkit-box-direction:reverse; /*Safari,Opera,Chrome*/
+	box-orient:vertical;
+    box-direction: reverse;
+	-moz-flex-direction:row-reverse;
+    -webkit-flex-direction: row-reverse;
+	flex-direction:row-reverse;
+}
+.bbox.tb{
+	-moz-box-direction:normal; /*Firefox*/
+    -webkit-box-direction: normal; /*Safari,Opera,Chrome*/
+    box-direction: normal;
+    -moz-box-orient: horizontal; /*Firefox*/
+    -webkit-box-orient: horizontal; /*Safari,Opera,Chrome*/
+    box-orient: horizontal;
+	-moz-flex-direction:column;
+    -webkit-flex-direction: column;
+	flex-direction:column;
+}
+.bbox.bt{
+	-moz-box-direction:reverse; /*Firefox*/
+    -webkit-box-direction:reverse; /*Safari,Opera,Chrome*/
+    box-direction:reverse;
+    -moz-box-orient: horizontal; /*Firefox*/
+    -webkit-box-orient: horizontal; /*Safari,Opera,Chrome*/
+    box-orient: horizontal;
+	-moz-flex-direction:column-reverse;
+    -webkit-flex-direction: column-reverse;
+	flex-direction:column-reverse;
+}
+
+/*
+* 换行
+*/
+.bbox.nowrap{
+    -moz-box-lines:single; /*Firefox*/
+    -webkit-box-lines:single; /*Safari,Opera,Chrome*/
+    box-lines: single;
+	-moz-flex-wrap:nowrap;
+	-webkit-flex-wrap:nowrap;
+	flex-wrap:nowrap;
+}
+.bbox.wrap{
+    -moz-box-lines:multiple; /*Firefox*/
+    -webkit-box-lines:multiple; /*Safari,Opera,Chrome*/
+    box-lines:multiple;
+	-moz-flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.bbox.wrap-reverse{
+	-moz-flex-wrap:wrap-reverse;
+	-webkit-flex-wrap:wrap-reverse;
+	flex-wrap:wrap-reverse;
+}
+
+/*
+*多主轴对齐
+*/
+.bbox.ytop-m{
+	-moz-align-content:flex-start;
+	-webkit-align-content:flex-start;
+	align-content:flex -start;
+}
+.bbox.ycenter-m{
+	-moz-align-content:center;
+	-webkit-align-content:center;
+	align-content:center;	
+}
+.bbox.ybottom-m{
+	-moz-align-content:flex-end;
+	-webkit-align-content:flex-end;
+	align-content:flex-end
+}
+.bbox.ybetween-m{
+	-moz-align-content:space-between ;
+	-webkit-align-content:space-between ;
+	align-content:space-between ;	
+}
+.bbox.yaround-m{
+	-moz-align-content:space-around ;
+	-webkit-align-content:space-around ;
+	align-content:space-around ;	
+}
+.bbox.ystretch-m{
+	-moz-align-content: stretch ;
+	-webkit-align-content: stretch ;
+	align-content: stretch;
+}
+
+
+/**
+**子元素属性
+**/
+.bbox .fauto{
+    -webkit-box-flex:auto ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: auto;       /* OLD - Firefox 19- */   
+    -webkit-flex: auto;        /* Chrome */  
+    -ms-flex: auto ;            /* IE 10 */  
+    flex: auto;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .fnone{
+    -webkit-box-flex:none ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: none;       /* OLD - Firefox 19- */   
+    -webkit-flex: none;        /* Chrome */  
+    -ms-flex: none ;            /* IE 10 */  
+    flex: none;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f0{
+    -webkit-box-flex:0 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 0;       /* OLD - Firefox 19- */   
+    -webkit-flex: 0;        /* Chrome */  
+    -ms-flex: 0 ;            /* IE 10 */  
+    flex: 0;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f1 {
+    -webkit-box-flex: 1 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 1;       /* OLD - Firefox 19- */                   
+    -webkit-flex: 1;        /* Chrome */  
+    -ms-flex: 1 ;            /* IE 10 */  
+    flex: 1;                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.bbox .f2{
+    -webkit-box-flex:2 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 2;       /* OLD - Firefox 19- */   
+    -webkit-flex: 2;        /* Chrome */  
+    -ms-flex: 2 ;            /* IE 10 */  
+    flex: 2;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f3{
+    -webkit-box-flex:3 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 3;       /* OLD - Firefox 19- */   
+    -webkit-flex: 3;        /* Chrome */  
+    -ms-flex: 3 ;            /* IE 10 */  
+    flex: 3;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f4{
+    -webkit-box-flex:4 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 4;       /* OLD - Firefox 19- */   
+    -webkit-flex: 4;        /* Chrome */  
+    -ms-flex: 4 ;            /* IE 10 */  
+    flex: 4;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f5{
+    -webkit-box-flex:5 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 5;       /* OLD - Firefox 19- */   
+    -webkit-flex: 5;        /* Chrome */  
+    -ms-flex: 5 ;            /* IE 10 */  
+    flex: 5;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f6{
+    -webkit-box-flex:6 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 6;       /* OLD - Firefox 19- */   
+    -webkit-flex: 6;        /* Chrome */  
+    -ms-flex: 6 ;            /* IE 10 */  
+    flex: 6;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f7{
+    -webkit-box-flex:7 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 7;       /* OLD - Firefox 19- */   
+    -webkit-flex: 7;        /* Chrome */  
+    -ms-flex: 7 ;            /* IE 10 */  
+    flex: 7;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f8{
+    -webkit-box-flex:8 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 8;       /* OLD - Firefox 19- */   
+    -webkit-flex: 8;        /* Chrome */  
+    -ms-flex: 8 ;            /* IE 10 */  
+    flex: 8;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+.bbox .f9{
+    -webkit-box-flex:9 ;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 9;       /* OLD - Firefox 19- */   
+    -webkit-flex: 9;        /* Chrome */  
+    -ms-flex: 9 ;            /* IE 10 */  
+    flex: 9;                /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+}
+/*
+ * 子元素单独对齐方式
+ */
+
+.bbox .selftop{
+	-webkit-ailgn-self:flex-start;
+	-moz-align-self:flex-start;
+	align-self:flex-start;
+}
+.bbox .selfbottom{
+	-webkit-ailgn-self: flex-end ;
+	-moz-align-self: flex-end ;
+	align-self: flex-end ;
+}
+.bbox .selfcenter{
+	-webkit-ailgn-self: center ;
+	-moz-align-self:center ;
+	align-self: center ;
+}
+.bbox .selfbaseline{
+	-webkit-ailgn-self: baseline;
+	-moz-align-self:baseline ;
+	align-self: baseline ;
+}
+.bbox .selfstretch{
+	-webkit-ailgn-self: stretch;
+	-moz-align-self:stretch ;
+	align-self: stretch ;
+}

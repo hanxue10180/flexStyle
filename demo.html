@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			.boxDiv {
+				-webkit-flex: 1;
+				display: flex;
+			    display: -webkit-flex;
+			    height: 100px;
+			 }
+			 
+			.boxDiv .left{
+				flex: 0 0 100px;
+				-ms-flex: 0 0 100px;
+				-webkit-flex: 0 0 100px;
+				border: 1px red solid;
+				display: -webkit-flex;
+				-webkit-justify-content: center;
+				-webkit-align-items: center;
+			}
+			
+			.boxDiv .left div{
+				height: 80px;
+				width: 80px;
+				
+				
+			}
+			
+			.boxDiv .right{
+				flex: 3;
+				-ms-flex: 3;
+				-webkit-flex: 3;
+				border: 1px blue solid;
+				display: flex;
+			    display: -webkit-flex;
+			    -webkit-flex-direction: column;
+			   	/*-webkit-justify-content: center;*/
+				/*-webkit-align-items: center;*/
+			}
+			.boxDiv .right div{
+				border: 1px blue solid;
+				-webkit-flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="boxDiv">
+		    <div class="left">
+		    		<div style="background-color: red"></div>
+		    	</div>
+		    <div class="right">
+		    		<div>111</div>
+		    		<div>111</div>
+		    		<div>111</div>
+		    		<div>444</div>
+		    </div>
+		</div>
+		
+		
+	</body>
+</html>

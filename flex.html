@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="flex.compatibility.css">
+<style>
+	.content{
+		border:1px solid red
+	}
+	.exam{
+		height:150px;
+		width:110px;
+		border:1px solid green;
+		font-size:10px;
+	}
+	.child{
+		height:50px;
+		width:50px;
+		background:#fff;
+		border:1px solid red;
+	}
+</style>
+</head>
+<body>
+	<div class="content bbox wrap">
+		<div class="exam bbox xleft">
+			<span class="child">水平居左</span>
+		</div>
+		<div class="exam bbox xright">		
+			<span class="child">水平居右</span>
+		</div>
+		<div class="exam bbox xcenter">		
+			<span class="child">水平居中</span>
+		</div>
+		<div class="exam bbox xbetween" style="width:200px;">		
+			<span class="child">space-between</span>
+			<span class="child">space-between</span>
+		</div>
+		<div class="exam bbox xaround" style="width:200px;">		
+			<span class="child"> space-around</span>
+			<span class="child">space-around</span>
+		</div>
+		<div class="exam bbox ytop">		
+			<span class="child">垂直居上</span>
+		</div>
+		<div class="exam bbox ybottom">		
+			<span class="child">垂直居下</span>
+		</div>
+		<div class="exam bbox ycenter">		
+			<span class="child">垂直居中</span>
+		</div>
+		<div class="exam bbox ybaseline" style="width:200px;">		
+			<span class="child" style="font-size:30px;">baseline</span>
+			<span class="child" style="font-size:10px;">baseline</span>
+		</div>
+		<div class="exam bbox stretch" style="width:200px">		
+			<span class="child" style="height:auto">stretch 高度auto</span>
+			<span class="child">stretch 高度固定</span>
+		</div>		
+		<div class="exam bbox xleft ytop">		
+			<span class="child">水平居左，垂直居上</span>
+		</div>
+		<div class="exam bbox xleft ybottom">
+			<span class="child">水平居左，垂直居下</span>
+		</div>
+		<div class="exam bbox xleft ycenter">		
+			<span class="child">水平居左，垂直居中</span>
+		</div>
+		<div class="exam bbox xright ytop">		
+			<span class="child">水平居右 垂直居上</span>
+		</div>
+		<div class="exam bbox xright ycenter">	
+			<span class="child">水平居右，垂直居中</span>
+		</div>
+		<div class="exam bbox xright ybottom">		
+			<span class="child">水平居右，垂直居下</span>
+		</div>
+		<div class="exam bbox xcenter ytop">		
+			<span class="child">水平居中，垂直居上</span>
+		</div>
+		<div class="exam bbox xcenter ycenter">
+			<span class="child">水平居中垂直居中</span>
+		</div>
+		<div class="exam bbox xycenter">
+			<span class="child">水平垂直居中</span>
+		</div>
+		<div class="exam bbox xcenter ybottom">		
+			<span class="child">水平居中，垂直居下</span>
+		</div>
+		<div class="exam bbox lr">		
+			<span class="child">方向从左到右1</span>
+			<span class="child">2</span>
+		</div>		
+		<div class="exam bbox rl">		
+			<span class="child">方向从右到左1</span>
+			<span class="child">2</span>
+		</div>
+		<div class="exam bbox tb">		
+			<span class="child">方向从上到下1</span>
+			<span class="child">2</span>
+		</div>
+		<div class="exam bbox bt">		
+			<span class="child">方向从下到上1</span>
+			<span class="child">2</span>
+		</div>
+		<div class="exam bbox wrap-reverse">		
+			<span class="child">换行第一行在下面1</span>
+			<span class="child">2</span>
+			<span class="child">3</span>
+		</div>
+		<div class="exam bbox ytop-m wrap">		
+			<span class="child">多轴顶部对齐1</span>
+			<span class="child">2</span>
+			<span class="child">3</span>
+		</div>
+		<div class="exam bbox ycenter-m wrap">		
+			<span class="child">多轴居中对齐1</span>
+			<span class="child">2</span>
+			<span class="child">3</span>
+		</div>
+		<div class="exam bbox ybottom-m wrap">		
+			<span class="child ">多轴底部对齐1</span>
+			<span class="child ">2</span>
+			<span class="child ">3</span>
+		</div>	
+		<div class="exam bbox ybetween-m wrap">		
+			<span class="child ">多轴两端对齐1</span>
+			<span class="child ">2</span>
+			<span class="child ">3</span>
+		</div>	
+		<div class="exam bbox yaround-m wrap">		
+			<span class="child ">多轴space-around对齐1</span>
+			<span class="child ">2</span>
+			<span class="child ">3</span>
+		</div>	
+		<div class="exam bbox ystretch-m wrap">		
+			<span class="child ">多轴stretch默认对齐1</span>
+			<span class="child ">2</span>
+			<span class="child ">3</span>
+		</div>
+		<div class="exam bbox wrap" style="width:300px;">		
+			<span class="child fauto">fauto</span>
+			<span class="child"></span>
+		</div>
+		<div class="exam bbox wrap" style="width:300px;">		
+			<span class="child f1"> f1</span>
+			<span class="child"></span>
+		</div>
+		<div class="exam bbox wrap" style="width:400px;">		
+			<span class="child f0">f0</span>
+			<span class="child f1">f1</span>
+			<span class="child f2">f2</span>
+			<span class="child fnone">fnone</span>
+		</div>
+		<div class="exam bbox wrap" style="width:700px;">		
+			<span class="child">0</span>
+			<span class="child selfcenter">1 子元素单独居中</span>
+			<span class="child selfbottom">2 子元素单独居下 </span>
+			<span class="child selfbaseline">3 子元素单独basline</span>
+			<span class="child selfstretch">3 子元素单独stretch</span>
+		</div>			
+	</div>
+</body>
+</html>

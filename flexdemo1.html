@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="flex.compatibility.css">
+<style>
+	.box{  
+        height:43px;  
+        width:43px;  
+        background: #fff;  
+        border:1px solid red;  
+        border-radius:5px;    
+        padding:5px;  
+        float: left;  
+        margin-right:10px;  
+    }   
+    .item{  
+        background: #000;  
+        height: 10px;  
+        width: 10px;  
+        border-radius:50%;  
+        margin: 2px;  
+        box-sizing: border-box;  
+    } 
+	.column{
+		width:100%;
+	}
+</style>
+<body>
+	<div class="bbox box xycenter">  
+        <span class="item"></span>  
+    </div>   
+    <div class=" bbox box xbetween">  
+        <span class="item"></span>  
+        <span class="item selfcenter"></span>  
+        <span class="item selfbottom"></span>  
+    </div>   
+    <div class="bbox box wrap">  
+        <div class="bbox column xbetween">  
+            <span class="item"></span>  
+            <span class="item"></span>  
+       </div>  
+       <div class="bbox column xcenter">  
+            <span class="item"></span>  
+       </div>  
+       <div class="bbox column xbetween">  
+            <span class="item"></span>  
+            <span class="item"></span>  
+       </div>  
+    </div>  
+</body>
+</html>
